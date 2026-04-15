@@ -7,10 +7,12 @@ body {
   background-color: rgb(240, 240, 240);
 }
 
+/* Element selector */
 h2 {
   color: var(--main-color, blue);
 }
 
+/* Class selector */
 .box {
   background-color: lightpink;
   margin: 10px 20px;
@@ -19,32 +21,39 @@ h2 {
   border-radius: 10px;
 }
 
+/* ID selector */
 #main {
   max-width: 800px;
   margin: auto;
 }
 
+/* Attribute selector */
 input[type="text"] {
   border: 2px solid blue;
 }
 
+/* Pseudo-class selector */
 a:hover {
   color: orange;
 }
 
+/* Descendant selector */
 nav ul {
   list-style: none;
 }
 
+/* Units (absolute + relative) */
 section {
   margin: 1cm;
   padding: 0.5in;
 }
 
+/* Image styling */
 img {
   width: 50%;
 }
 
+/* Flexbox */
 .flex-container {
   display: flex;
   justify-content: space-around;
@@ -56,6 +65,7 @@ img {
   padding: 10px;
 }
 
+/* Grid */
 .grid-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -67,6 +77,7 @@ img {
   padding: 10px;
 }
 
+/* Media Query */
 @media (max-width: 600px) {
   .flex-container {
     flex-direction: column;
@@ -77,6 +88,7 @@ img {
   }
 }
 
+/* Advanced selector */
 section:has(img) {
   border: 3px dashed red;
 }
