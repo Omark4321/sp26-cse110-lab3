@@ -344,3 +344,116 @@ nav a {
   background-color: rgba(255,255,255,0.18);
   border-radius: 50%;
 }
+
+
+/* ======= hover + active states ======= */
+
+a:hover {
+  color: var(--mix);
+  text-decoration: none;
+}
+
+a:active {
+  color: orange;
+}
+
+nav a:hover {
+  background-color: var(--main-red);
+  color: white;
+  border-radius: 3px;
+}
+
+button:hover {
+  background-color: var(--mix);
+}
+button:active {
+  background-color: #7a1e16;
+}
+
+.pick-card:hover {
+  border-color: var(--main-red);
+  background-color: #fff0ec;
+}
+
+
+/* ======= combinators + extra selectors ======= */
+
+/* child combinator - only direct li kids of nav ul */
+nav > ul > li {
+  padding: 2px 0;
+}
+
+/* adjacent sibling - p right after h3 gets a little extra top space */
+h3 + p {
+  margin-top: 2px;
+  color: #444;
+}
+
+/* general sibling - any p after h3 in same section */
+h3 ~ ul {
+  margin-top: 6px;
+}
+
+/* combining element + class */
+section.sec {
+  scroll-margin-top: 70px; /* so sticky nav doesnt cover headers */
+}
+
+/* :has() - style any .sec that has a form inside it differently */
+.sec:has(form) {
+  background-color: #fffdfa;
+  border-left: 4px solid var(--main-red);
+}
+
+/* nested selector - new syntax */
+.pick-card {
+  & h4 {
+    letter-spacing: 0.5px;
+  }
+  & .tag:hover {
+    background-color: var(--mix);
+  }
+}
+
+
+/* ======= responsive media queries ======= */
+
+/* phones */
+@media (max-width: 600px) {
+  h1 { font-size: 1.5rem; }
+
+  nav ul li {
+    display: inline-block;
+    margin-right: 2px;
+  }
+  nav a {
+    font-size: 12px;
+    padding: 4px 6px;
+  }
+
+  .picks-row {
+    flex-direction: column;
+  }
+
+  .roles-grid {
+    grid-template-columns: 1fr;  /* stack on phone */
+  }
+
+  main {
+    width: 96%;
+  }
+
+  .sec {
+    padding: 14px;
+  }
+}
+
+/* tablet */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .roles-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  main {
+    width: 94%;
+  }
+}
