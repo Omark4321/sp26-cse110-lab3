@@ -1,169 +1,180 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <link rel="stylesheet" href="css/styles.css">
-    <meta charset="UTF-8">
-    <meta name="description" content="Sample meeting minutes template for a brainstorming session">
-    <title>Pomodoro Timer First Brainstorm</title>
-    <link rel="icon" href="favicon.ico">
-  </head>
-  <body>
-    <header>
-      <h1>Pomodoro Timer First Brainstorm</h1>
-      <h2>Brainstorming Session</h2>
-      <h3>April 5, 2026</h3>
-      <p>This page records the meeting minutes for the first team brainstorming session.</p>
-    </header>
+<head>
+  <meta charset="UTF-8">
+  <title>Film Club Meeting Minutes</title>
+  <meta name="description" content="film club meeting notes">
+</head>
 
-    <nav>
-      <ul>
-        <li><a href="#attendance">Attendance</a></li>
-        <li><a href="#agenda">Agenda</a></li>
-        <li><a href="#unfinished">Unfinished Business</a></li>
-        <li><a href="#new">New Business</a></li>
-        <li><a href="#misc">Comments</a></li>
-        <li><a href="#media">Media</a></li>
-        <li><a href="#extras">Extra Notes</a></li>
-        <li><a href="#feedback">Feedback Form</a></li>
-      </ul>
-    </nav>
+<body>
 
-    <main>
-      <section id="attendance">
-        <h3>Attendance</h3>
-        <ul>
-          <li>Omar</li>
-          <li>Alice</li>
-          <li>Brian</li>
-          <li>Carla</li>
-        </ul>
-      </section>
+<header id="top" class="meeting-header">
+  <h1 style="font-family: Georgia;">UCSD Film Club - Meeting #4</h1>
+  <h2>Weekly General Meeting</h2>
+  <h3>April 12, 2026</h3>
+  <p>notes from our weekly meeting, taken by Omar (again lol)</p>
+</header>
 
-      <section id="agenda">
-        <h3>Agenda</h3>
-        <ol>
-          <li>Introduce the Pomodoro Timer project idea</li>
-          <li>Discuss desired features</li>
-          <li>Assign early research tasks</li>
-          <li>Plan next meeting</li>
-        </ol>
-      </section>
 
-      <section id="unfinished">
-        <h3>Unfinished Business</h3>
-        <p>The team still needs to decide whether users should be able to customize timer sounds and notification styles.</p>
-      </section>
+<nav id="nav">
+  <ul>
+    <li><a href="#attendance">Attendance</a></li>
+    <li><a href="#agenda">Agenda</a></li>
+    <li><a href="#picks">Film Picks</a></li>
+    <li><a href="#roles">Roles</a></li>
+    <li><a href="#old">Old Business</a></li>
+    <li><a href="#new">New Business</a></li>
+    <li><a href="#notes">Misc Notes</a></li>
+    <li><a href="#feedback">Feedback</a></li>
+  </ul>
+</nav>
 
-      <section id="new">
-        <h3>New Business</h3>
-        <p>The group discussed adding task history, daily productivity statistics, and short break reminders.</p>
-      </section>
+<main id="wrap">
 
-      <section id="misc">
-        <h3>Comments, Questions, and Concerns</h3>
-        <div>
-          <p>
-            <strong>Important:</strong> the team wants a working prototype by next week.<br>
-            This is still a <b>rough draft</b> of the app concept.<br>
-            The working name for the project is <i>FocusFlow</i>.<br>
-            Everyone agreed we should <em>carefully</em> test notifications before release.
-          </p>
-          <p>The <span>team leader</span> ended the discussion by asking everyone to prepare feature ideas for the next meeting.</p>
-        </div>
+  <section id="attendance" class="sec">
+    <h3>Attendance</h3>
+    <p>people who showed up:</p>
+    <ul>
+      <li data-role="pres">Omar (president)</li>
+      <li data-role="vp">Sofia</li>
+      <li>John</li>
+      <li>Priya</li>
+      <li>Marcus</li>
+      <li>Elaine</li>
+      <li>Diego</li>
+      <li>Ava</li>
+    </ul>
+  </section>
+
+  <section id="agenda" class="sec">
+    <h3>Agenda</h3>
+    <ol>
+      <li>pick next screening film</li>
+      <li>figure out the budget thing</li>
+      <li>assign promo roles</li>
+      <li>spring social planning</li>
+    </ol>
+  </section>
+
+  <section id="picks" class="sec flex-sec">
+    <h3>Film Picks for Next Screening</h3>
+    <p>we narrowed it down to three. voting next week.</p>
+    <div class="picks-row">
+      <div class="pick-card">
+        <h4>Parasite</h4>
+        <p>Bong Joon-ho, 2019</p>
+        <span class="tag">drama</span>
+      </div>
+      <div class="pick-card">
+        <h4>Spirited Away</h4>
+        <p>Miyazaki, 2001</p>
+        <span class="tag">animated</span>
+      </div>
+      <div class="pick-card">
+        <h4>Whiplash</h4>
+        <p>Chazelle, 2014</p>
+        <span class="tag">drama</span>
+      </div>
+      <div class="pick-card">
+        <h4>Everything Everywhere</h4>
+        <p>Daniels, 2022</p>
+        <span class="tag">scifi</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="roles" class="sec">
+    <h3>Promo Roles</h3>
+    <p>who's doing what for the next screening night:</p>
+    <div class="roles-grid">
+      <div class="role-cell"><strong>Posters</strong><p>Sofia</p></div>
+      <div class="role-cell"><strong>Instagram</strong><p>Priya</p></div>
+      <div class="role-cell"><strong>Snacks</strong><p>John said he'd handle it</p></div>
+      <div class="role-cell"><strong>AV setup</strong><p>Marcus</p></div>
+      <div class="role-cell"><strong>Door/Tickets</strong><p>Diego + Ava</p></div>
+      <div class="role-cell"><strong>Cleanup</strong><p>literally everyone pls</p></div>
+    </div>
+  </section>
+
+  <section id="old" class="sec">
+    <h3>Old Business</h3>
+    <p>still haven't heard back from the student activities office about the bigger projector. Omar will email them again.</p>
+    <p>the blanket fort idea is officially cancelled (fire code).</p>
+  </section>
+
+  <section id="new" class="sec">
+    <h3>New Business</h3>
+    <p>Elaine pitched doing a <em>short film contest</em> for spring quarter. people seemed into it.</p>
+    <p>we need to figure out the budget thing before anything real happens though.</p>
+    <ul>
+      <li>prize money?</li>
+      <li>submission deadline</li>
+      <li>judging panel</li>
+    </ul>
+  </section>
+
+  <section id="notes" class="sec">
+    <h3>Misc Notes</h3>
+    <div class="callout">
+      <p><strong>reminder:</strong> room change next week - we're in PCYN 109 not the usual room.</p>
+    </div>
+    <p>also someone left a hoodie last time. it's in the club cabinet.</p>
+    <hr>
+    <p>meeting ended at 8:47pm. <a href="https://github.com">club repo link</a></p>
+  </section>
+
+  <section id="feedback" class="sec">
+    <h3>Feedback Form</h3>
+    <form>
+      <fieldset>
+        <legend>tell us how we're doing</legend>
+
         <p>
-          For reference, the team will keep project notes in the
-          <a href="https://github.com/Omark4321/Lab2_Starter">project repository</a>.
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name">
         </p>
-        <hr>
-      </section>
 
-      <section id="media">
-        <h3>Presented Diagram</h3>
-        <img src="screenshots/Untitled design.png" alt="Sample planning diagram or whiteboard sketch from the meeting">
+        <p>
+          <label for="mdate">Meeting date:</label>
+          <input type="date" id="mdate" name="mdate">
+        </p>
 
-        <h3>Audio Recording</h3>
-        <audio controls>
-        <source src="media/safeyable-efek-suara-funny-putri-lucu-180275.mp3" type="audio/mpeg">
-          Your browser does not support the audio element.
-        </audio>
+        <p>was this meeting useful?</p>
+        <input type="radio" id="yes" name="useful" value="yes">
+        <label for="yes">yeah</label>
+        <input type="radio" id="no" name="useful" value="no">
+        <label for="no">not really</label>
 
-        <h3>Video Recording</h3>
-        <video controls width="320">
-          <source src="media/81496-576306063_medium.mp4" type="video/mp4">
-          Your browser does not support the video element.
-        </video>
-      </section>
+        <p>what do you want to see more of:</p>
+        <input type="checkbox" id="c1" name="screen"> <label for="c1">screenings</label>
+        <input type="checkbox" id="c2" name="disc"> <label for="c2">discussions</label>
+        <input type="checkbox" id="c3" name="socials"> <label for="c3">socials</label>
 
-      <section id="extras">
-        <h3>Additional Brainstorming Notes</h3>
-        <details>
-          <summary>Click to view extra discussion notes</summary>
-          <p>The team also suggested dark mode support, keyboard shortcuts, and optional ambient background sounds.</p>
-        </details>
-      </section>
+        <p>
+          <label for="role">your role:</label>
+          <select id="role" name="role">
+            <option>member</option>
+            <option>officer</option>
+            <option>new member</option>
+          </select>
+        </p>
 
-      <section id="feedback">
-        <h3>Feedback Form</h3>
-        <form>
-          <fieldset>
-            <legend>Meeting Feedback</legend>
+        <p>
+          <label for="comments">extra comments:</label>
+          <textarea id="comments" name="comments" rows="4" cols="30"></textarea>
+        </p>
 
-            <p>
-              <label for="name">Name:</label>
-              <input type="text" id="name" name="name">
-            </p>
+        <button type="submit">send it</button>
+      </fieldset>
+    </form>
+  </section>
 
-            <p>
-              <label for="meeting-date">Meeting Date:</label>
-              <input type="date" id="meeting-date" name="meeting-date">
-            </p>
+</main>
 
-            <p>Was the meeting helpful?</p>
-            <input type="radio" id="helpful-yes" name="helpful" value="yes">
-            <label for="helpful-yes">Yes</label>
+<footer>
+  <p>film club meeting minutes - cse110 lab3</p>
+  <p><a href="#top">back to top</a></p>
+</footer>
 
-            <input type="radio" id="helpful-no" name="helpful" value="no">
-            <label for="helpful-no">No</label>
-
-            <p>Topics you liked:</p>
-            <input type="checkbox" id="topic-design" name="topic-design" value="design">
-            <label for="topic-design">Design</label>
-
-            <input type="checkbox" id="topic-planning" name="topic-planning" value="planning">
-            <label for="topic-planning">Planning</label>
-
-            <p>
-              <label for="tool">Favorite Tool:</label>
-              <input list="tools" id="tool" name="tool">
-              <datalist id="tools">
-                <option value="GitHub"></option>
-                <option value="Figma"></option>
-                <option value="VS Code"></option>
-              </datalist>
-            </p>
-
-            <p>
-              <label for="role">Role:</label>
-              <select id="role" name="role">
-                <option value="developer">Developer</option>
-                <option value="designer">Designer</option>
-                <option value="manager">Manager</option>
-              </select>
-            </p>
-
-            <p>
-              <label for="comments">Additional Comments:</label>
-              <textarea id="comments" name="comments" rows="4" cols="30"></textarea>
-            </p>
-
-            <button type="submit">Submit</button>
-          </fieldset>
-        </form>
-      </section>
-    </main>
-
-    <footer>
-      <p>Meeting minutes prepared for Lab 2 HTML practice.</p>
-    </footer>
-  </body>
+</body>
 </html>
