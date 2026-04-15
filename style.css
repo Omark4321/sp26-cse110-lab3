@@ -209,3 +209,138 @@ hr {
   border-top: 2mm solid var(--line);  /* mm cuz why not */
   margin: 12px 0;
 }
+
+
+/* ======= layout stuff ======= */
+
+/* nav sticks to the top when u scroll */
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+}
+
+/* header needs to be relative so the dot absolute works later */
+header {
+  position: relative;
+}
+
+/* flex row for the film picks - 4 cards side by side */
+.picks-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 14px;
+  align-items: stretch;
+}
+
+.pick-card {
+    background-color: #fff7f5;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    padding: 12px;
+    flex: 1 1 180px;    /* grow/shrink, min 180 */
+    min-width: 150px;
+    text-align: center;
+}
+
+.pick-card h4 {
+  color: var(--main-red);
+  margin-bottom: 4px;
+}
+
+.pick-card p {
+  font-size: 13px;
+  color: #555;
+}
+
+.tag {
+  display: inline-block;
+  background-color: var(--main-red);
+  color: white;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 11px;
+  margin-top: 6px;
+}
+
+
+/* grid for promo roles - 3 cols */
+.roles-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  gap: 12px;
+}
+
+.role-cell {
+  background-color: #fafafa;
+  border: 1px solid var(--line);
+  padding: 10px;
+  border-radius: 6px;
+  min-height: 70px;
+  grid-column: span 1;
+}
+
+.role-cell strong {
+  color: var(--main-red);
+  display: block;
+  margin-bottom: 4px;
+}
+
+.role-cell p {
+  font-size: 0.9em;
+  margin: 0;
+}
+
+
+/* hidden stuff - for future use ig */
+.hidden {
+  display: none;
+}
+
+/* inline elements in paragraphs */
+em {
+  display: inline;
+  color: var(--main-red);
+  font-style: italic;
+}
+
+
+/* sizing for header title */
+header h1 {
+  width: 100%;
+  max-width: 720px;
+  min-width: 200px;
+  height: auto;
+}
+
+/* text alignment */
+footer p {
+  text-align: center;
+}
+
+.tag, .badge {
+  text-align: center;
+}
+
+header {
+  text-align: left;
+}
+
+
+/* remove underline on nav links */
+nav a {
+  text-decoration: none;
+}
+
+/* a little decorative dot in the header top-right */
+.header-dot {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  width: 40pt;
+  height: 40pt;
+  background-color: rgba(255,255,255,0.18);
+  border-radius: 50%;
+}
