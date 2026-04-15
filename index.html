@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Sample meeting minutes template for a brainstorming session">
+    <title>Pomodoro Timer First Brainstorm</title>
+    <link rel="icon" href="favicon.ico">
+  </head>
+  <body>
+    <header>
+      <h1>Pomodoro Timer First Brainstorm</h1>
+      <h2>Brainstorming Session</h2>
+      <h3>April 5, 2026</h3>
+      <p>This page records the meeting minutes for the first team brainstorming session.</p>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="#attendance">Attendance</a></li>
+        <li><a href="#agenda">Agenda</a></li>
+        <li><a href="#unfinished">Unfinished Business</a></li>
+        <li><a href="#new">New Business</a></li>
+        <li><a href="#misc">Comments</a></li>
+        <li><a href="#media">Media</a></li>
+        <li><a href="#extras">Extra Notes</a></li>
+        <li><a href="#feedback">Feedback Form</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <section id="attendance">
+        <h3>Attendance</h3>
+        <ul>
+          <li>Omar</li>
+          <li>Alice</li>
+          <li>Brian</li>
+          <li>Carla</li>
+        </ul>
+      </section>
+
+      <section id="agenda">
+        <h3>Agenda</h3>
+        <ol>
+          <li>Introduce the Pomodoro Timer project idea</li>
+          <li>Discuss desired features</li>
+          <li>Assign early research tasks</li>
+          <li>Plan next meeting</li>
+        </ol>
+      </section>
+
+      <section id="unfinished">
+        <h3>Unfinished Business</h3>
+        <p>The team still needs to decide whether users should be able to customize timer sounds and notification styles.</p>
+      </section>
+
+      <section id="new">
+        <h3>New Business</h3>
+        <p>The group discussed adding task history, daily productivity statistics, and short break reminders.</p>
+      </section>
+
+      <section id="misc">
+        <h3>Comments, Questions, and Concerns</h3>
+        <div>
+          <p>
+            <strong>Important:</strong> the team wants a working prototype by next week.<br>
+            This is still a <b>rough draft</b> of the app concept.<br>
+            The working name for the project is <i>FocusFlow</i>.<br>
+            Everyone agreed we should <em>carefully</em> test notifications before release.
+          </p>
+          <p>The <span>team leader</span> ended the discussion by asking everyone to prepare feature ideas for the next meeting.</p>
+        </div>
+        <p>
+          For reference, the team will keep project notes in the
+          <a href="https://github.com/Omark4321/Lab2_Starter">project repository</a>.
+        </p>
+        <hr>
+      </section>
+
+      <section id="media">
+        <h3>Presented Diagram</h3>
+        <img src="screenshots/Untitled design.png" alt="Sample planning diagram or whiteboard sketch from the meeting">
+
+        <h3>Audio Recording</h3>
+        <audio controls>
+        <source src="media/safeyable-efek-suara-funny-putri-lucu-180275.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+
+        <h3>Video Recording</h3>
+        <video controls width="320">
+          <source src="media/81496-576306063_medium.mp4" type="video/mp4">
+          Your browser does not support the video element.
+        </video>
+      </section>
+
+      <section id="extras">
+        <h3>Additional Brainstorming Notes</h3>
+        <details>
+          <summary>Click to view extra discussion notes</summary>
+          <p>The team also suggested dark mode support, keyboard shortcuts, and optional ambient background sounds.</p>
+        </details>
+      </section>
+
+      <section id="feedback">
+        <h3>Feedback Form</h3>
+        <form>
+          <fieldset>
+            <legend>Meeting Feedback</legend>
+
+            <p>
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="name">
+            </p>
+
+            <p>
+              <label for="meeting-date">Meeting Date:</label>
+              <input type="date" id="meeting-date" name="meeting-date">
+            </p>
+
+            <p>Was the meeting helpful?</p>
+            <input type="radio" id="helpful-yes" name="helpful" value="yes">
+            <label for="helpful-yes">Yes</label>
+
+            <input type="radio" id="helpful-no" name="helpful" value="no">
+            <label for="helpful-no">No</label>
+
+            <p>Topics you liked:</p>
+            <input type="checkbox" id="topic-design" name="topic-design" value="design">
+            <label for="topic-design">Design</label>
+
+            <input type="checkbox" id="topic-planning" name="topic-planning" value="planning">
+            <label for="topic-planning">Planning</label>
+
+            <p>
+              <label for="tool">Favorite Tool:</label>
+              <input list="tools" id="tool" name="tool">
+              <datalist id="tools">
+                <option value="GitHub"></option>
+                <option value="Figma"></option>
+                <option value="VS Code"></option>
+              </datalist>
+            </p>
+
+            <p>
+              <label for="role">Role:</label>
+              <select id="role" name="role">
+                <option value="developer">Developer</option>
+                <option value="designer">Designer</option>
+                <option value="manager">Manager</option>
+              </select>
+            </p>
+
+            <p>
+              <label for="comments">Additional Comments:</label>
+              <textarea id="comments" name="comments" rows="4" cols="30"></textarea>
+            </p>
+
+            <button type="submit">Submit</button>
+          </fieldset>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>Meeting minutes prepared for Lab 2 HTML practice.</p>
+    </footer>
+  </body>
+</html>
