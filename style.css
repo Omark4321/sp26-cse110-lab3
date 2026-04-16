@@ -1,9 +1,7 @@
-/* pomodoro brainstorm meeting minutes */
-/* cse110 lab3 - omar */
+
 
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap');
 
-/* vars so i dont gotta retype these */
 :root {
   --tomato: tomato;
   --ink: #2b2b2b;
@@ -27,7 +25,7 @@
 /* base stuff */
 body {
     font-family: 'Nunito', Arial, sans-serif;
-    background-color: var(--page, #fff);   /* fallback if var dies */
+    background-color: var(--page, #fff);   
     color: var(--ink);
     font-size: 16px;
     line-height: 1.55;
@@ -52,10 +50,9 @@ a {
 }
 
 
-/* big red-ish header at the top */
 header {
   background-color: var(--p3red);
-  background-color: var(--accent);  /* fallback for browsers w/o p3 */
+  background-color: var(--accent);  
   color: white;
   text-align: left;
 }
