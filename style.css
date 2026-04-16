@@ -9,6 +9,12 @@
   --ink: #2b2b2b;
   --page: #fdfaf4;
   --line: #e3ddd1;
+  --accent: rgb(210, 80, 60);
+  --soft:   rgba(255, 99, 71, 0.18);
+  --cool:   hsl(205, 55%, 38%);
+  --cool2:  hsla(205, 45%, 55%, 0.9);
+  --p3red:  color(display-p3 0.88 0.35 0.28);
+  --mixed:  color-mix(in srgb, tomato 65%, black);
 }
 
 
@@ -21,6 +27,7 @@
 /* base stuff */
 body {
     font-family: 'Nunito', Arial, sans-serif;
+    background-color: var(--page, #fff);   /* fallback if var dies */
     color: var(--ink);
     font-size: 16px;
     line-height: 1.55;
@@ -43,3 +50,36 @@ a {
   color: var(--tomato);
   text-decoration: underline;
 }
+
+
+/* big red-ish header at the top */
+header {
+  background-color: var(--p3red);
+  background-color: var(--accent);  /* fallback for browsers w/o p3 */
+  color: white;
+  text-align: left;
+}
+
+header h1 { color: white; }
+header h2 { color: rgba(255,255,255,0.88); font-weight: 400; }
+header h3 { color: hsla(0, 0%, 100%, 0.75); font-weight: 400; }
+header p  { color: #f3f3f3; }
+
+
+nav {
+  background-color: var(--mixed);
+  color: white;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+footer {
+  background-color: var(--cool);
+  color: #eaeaea;
+  text-align: center;
+}
+
+footer a { color: var(--cool2); }
