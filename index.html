@@ -6,16 +6,33 @@
     <title>Pomodoro Timer First Brainstorm</title>
     <link rel="icon" href="favicon.ico">
     <link rel="stylesheet" href="style.css">
+
+    <!-- quick internal tweaks, testing some stuff -->
+    <style>
+      .badge {
+        display: inline-block;
+        background-color: tomato;
+        color: white;
+        padding: 2px 8px;
+        border-radius: 10px;
+        font-size: 12px;
+      }
+      .small-note {
+        font-size: 0.8rem;
+        color: #777;
+      }
+    </style>
   </head>
   <body>
-    <header>
-      <h1>Pomodoro Timer First Brainstorm</h1>
+    <header id="top" class="meeting-header">
+      <span class="header-dot"></span>
+      <h1 style="font-family: Georgia;">Pomodoro Timer First Brainstorm</h1>
       <h2>Brainstorming Session</h2>
-      <h3>April 5, 2026</h3>
-      <p>This page records the meeting minutes for the first team brainstorming session.</p>
+      <h3>April 5, 2026 <span class="badge">meeting #1</span></h3>
+      <p style="font-style: italic;">This page records the meeting minutes for the first team brainstorming session.</p>
     </header>
 
-    <nav>
+    <nav id="nav">
       <ul>
         <li><a href="#attendance">Attendance</a></li>
         <li><a href="#agenda">Agenda</a></li>
@@ -28,18 +45,18 @@
       </ul>
     </nav>
 
-    <main>
-      <section id="attendance">
+    <main id="wrap">
+      <section id="attendance" class="sec">
         <h3>Attendance</h3>
-        <ul>
-          <li>Omar</li>
-          <li>Alice</li>
-          <li>Brian</li>
-          <li>Carla</li>
+        <ul class="attend-row">
+          <li data-role="lead">Omar</li>
+          <li data-role="member">Alice</li>
+          <li data-role="member">Brian</li>
+          <li data-role="member">Carla</li>
         </ul>
       </section>
 
-      <section id="agenda">
+      <section id="agenda" class="sec">
         <h3>Agenda</h3>
         <ol>
           <li>Introduce the Pomodoro Timer project idea</li>
@@ -49,19 +66,19 @@
         </ol>
       </section>
 
-      <section id="unfinished">
+      <section id="unfinished" class="sec">
         <h3>Unfinished Business</h3>
         <p>The team still needs to decide whether users should be able to customize timer sounds and notification styles.</p>
       </section>
 
-      <section id="new">
+      <section id="new" class="sec">
         <h3>New Business</h3>
         <p>The group discussed adding task history, daily productivity statistics, and short break reminders.</p>
       </section>
 
-      <section id="misc">
+      <section id="misc" class="sec">
         <h3>Comments, Questions, and Concerns</h3>
-        <div>
+        <div class="callout">
           <p>
             <strong>Important:</strong> the team wants a working prototype by next week.<br>
             This is still a <b>rough draft</b> of the app concept.<br>
@@ -70,31 +87,40 @@
           </p>
           <p>The <span>team leader</span> ended the discussion by asking everyone to prepare feature ideas for the next meeting.</p>
         </div>
-        <p>
+        <p class="small-note">
           For reference, the team will keep project notes in the
           <a href="https://github.com/Omark4321/Lab2_Starter">project repository</a>.
         </p>
         <hr>
       </section>
 
-      <section id="media">
-        <h3>Presented Diagram</h3>
-        <img src="screenshots/Untitled design.png" alt="Sample planning diagram or whiteboard sketch from the meeting">
+      <section id="media" class="sec">
+        <h3>Meeting Media</h3>
+        <div class="media-grid">
+          <div class="media-cell">
+            <h4>Presented Diagram</h4>
+            <img src="screenshots/Untitled design.png" alt="Sample planning diagram or whiteboard sketch from the meeting">
+          </div>
 
-        <h3>Audio Recording</h3>
-        <audio controls>
-        <source src="media/safeyable-efek-suara-funny-putri-lucu-180275.mp3" type="audio/mpeg">
-          Your browser does not support the audio element.
-        </audio>
+          <div class="media-cell">
+            <h4>Audio Recording</h4>
+            <audio controls>
+            <source src="media/safeyable-efek-suara-funny-putri-lucu-180275.mp3" type="audio/mpeg">
+              Your browser does not support the audio element.
+            </audio>
+          </div>
 
-        <h3>Video Recording</h3>
-        <video controls width="320">
-          <source src="media/81496-576306063_medium.mp4" type="video/mp4">
-          Your browser does not support the video element.
-        </video>
+          <div class="media-cell">
+            <h4>Video Recording</h4>
+            <video controls width="320">
+              <source src="media/81496-576306063_medium.mp4" type="video/mp4">
+              Your browser does not support the video element.
+            </video>
+          </div>
+        </div>
       </section>
 
-      <section id="extras">
+      <section id="extras" class="sec">
         <h3>Additional Brainstorming Notes</h3>
         <details>
           <summary>Click to view extra discussion notes</summary>
@@ -102,7 +128,7 @@
         </details>
       </section>
 
-      <section id="feedback">
+      <section id="feedback" class="sec">
         <h3>Feedback Form</h3>
         <form>
           <fieldset>
@@ -163,7 +189,8 @@
     </main>
 
     <footer>
-      <p>Meeting minutes prepared for Lab 2 HTML practice.</p>
+      <p>Meeting minutes prepared for CSE110 Lab 3 CSS practice.</p>
+      <p><a href="#top">back to top</a></p>
     </footer>
   </body>
 </html>
