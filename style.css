@@ -27,31 +27,27 @@ body {
     font-size: 16px;
 }
 
-<<<<<<< HEAD
 h1, h2, h3, h4 {
   font-family: Nunito, Georgia, serif;
 }
-
 h1 { font-size: 2rem; }
 h2 { font-size: 1.25rem; }
 h3 { font-size: 1.05rem; }
 h4 { font-size: 1rem; }
-
 
 p {
   margin-bottom: 10px;
 }
 
 a {
-  color: var(--tomato);
+  color: var(--main-red);
   text-decoration: underline;
 }
 
 
-/* big warm banner at the top */
 header {
   background-color: var(--p3red);
-  background-color: var(--accent);  /* fallback for browsers w/o p3 */
+  background-color: var(--accent);
   color: white;
   text-align: left;
   padding-top: 34px;
@@ -59,56 +55,37 @@ header {
   padding-bottom: 22px;
   padding-left: 24px;
   border-bottom: 6px solid var(--mixed);
-  position: relative;  /* so the dot absolute works */
+  position: relative;
 }
-
-header h1 { color: white; margin-bottom: 4px; }
+header h1 {
+  color: white;
+  margin-bottom: 4px;
+  width: 100%;
+  max-width: 720px;
+  min-width: 200px;
+  height: auto;
+}
 header h2 { color: rgba(255,255,255,0.88); font-weight: 400; }
 header h3 { color: hsla(0, 0%, 100%, 0.75); font-weight: 400; margin-bottom: 6px; }
 header p  { color: #f3f3f3; }
 
-/* little dot decoration in the corner, idk felt like it */
 .header-dot {
-  position: absolute;
-  top: 18px;
-  right: 18px;
-  width: 36pt;
-  height: 36pt;
-  background-color: rgba(255,255,255,0.18);
-  border-radius: 50%;
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    width: 36pt;
+    height: 36pt;
+    background-color: rgba(255,255,255,0.18);
+    border-radius: 50%;
 }
 
-
-/* navbar */
 nav {
   background-color: var(--mixed);
   color: white;
-  padding: 10px 20px;
+  padding: 10px 20px 10px 20px;
   position: sticky;
   top: 0;
   z-index: 50;
-}
-
-nav ul {
-  list-style: none;
-}
-
-nav ul li {
-  display: inline-block;  /* horizontal menu */
-  margin-right: 6px;
-}
-
-nav a {
-  color: #fff;
-  text-decoration: none;
-  padding: 6px 10px;
-  font-size: 14px;
-  border-radius: 4px;
-=======
-nav {
-  background-color: var(--mixed);
-  color: white;
-  padding: 8px 0px 8px 0px;
 }
 nav ul {
     display: flex;
@@ -118,93 +95,79 @@ nav ul {
     gap: 18px;
     list-style: none;
 }
+nav ul li {
+  display: inline-block;
+  margin-right: 6px;
+}
 nav a {
     color: #fff;
     text-decoration: none;
     padding: 4px 10px;
     border-radius: 4px;
-}
-nav a:hover {
-  background-color: var(--soft);
-  color: var(--main-red);
-}
-nav a:active {
-    background-color: tomato;
-    color: white;
+    font-size: 14px;
 }
 
-header {
-    background-color: var(--p3red);
-    background-color: var(--accent);
-    color: white;
-    text-align: left;
-    padding: 2rem 1.5rem 1.5rem 1.5rem;
-}
-header h1 {
-  font-size: 2rem;
-  color: white;
-}
-header h2 {
-    color: rgba(255,255,255,0.88);
-    font-weight: 400;
-    font-size: 1.25rem;
-}
-header h3 { color: hsla(0, 0%, 100%, 0.75); font-weight: 400; }
-header p { color: #f3f3f3; }
-
-h1, h2, h3, h4 {
-  font-family: Nunito, Georgia, serif;
-}
-h3 { font-size: 1.05rem; }
-
-a {
-  color: var(--main-red);
-  text-decoration: underline;
-}
-
-p {
-    margin-bottom: 10px;
-}
 
 main {
-  max-width: 900px;
-  min-width: 280px;
-  width: 90%;
-  margin: auto;
-  padding-top: 24px;
-  padding-bottom: 32px;
-  min-height: 80vh;
+    max-width: 900px;
+    min-width: 280px;
+    width: 92%;
+    margin: 24px auto;
+    padding-top: 6px;
+    padding-bottom: 40px;
+    min-height: 80vh;
 }
 
-section {
-  margin-bottom: 28px;
-  padding: 18px 20px;
+section, .sec {
+  background-color: #ffffff;
   border-style: solid;
   border-color: var(--line-color);
   border-width: 1pt;
-  border-radius: 8px;
-  background-color: white;
+  border-radius: 10px;
+  margin-bottom: 18px;
+  padding: 1.15rem 1.4rem 1.15rem 1.4rem;
+  scroll-margin-top: 70px;
 }
-section h3 {
+
+section h3, .sec h3 {
     margin-bottom: 12px;
     color: var(--accent);
     border-bottom: 2px solid var(--soft);
     padding-bottom: 6px;
 }
 
-#attendance ul {
+.attend-row {
   list-style: none;
   display: flex;
-  gap: 14px;
   flex-wrap: wrap;
+  gap: 10px;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 4px;
 }
-#attendance ul li {
+.attend-row li {
     background-color: var(--soft);
-    padding: 6px 14px;
-    border-radius: 20px;
+    padding: 6px 12px;
+    border: 1px solid var(--line-color);
+    border-radius: 14px;
+    font-size: 0.95em;
     display: inline-block;
     color: var(--text);
     font-weight: 600;
+}
+.attend-row li[data-role="lead"] {
+  background-color: var(--accent);
+  color: white;
+  border-color: var(--mixed);
+  font-weight: 600;
+}
+
+
+#agenda ol {
+  padding-left: 1.4rem;
+}
+#agenda li {
+  margin-bottom: 4px;
 }
 
 .agenda-grid {
@@ -224,43 +187,72 @@ section h3 {
   margin: 4px 2px 4px 0;
 }
 
-#media img {
-  width: 100%;
-  max-width: 480px;
-  height: auto;
-  border-radius: 6px;
-  margin-top: 8px;
-  margin-bottom: 12px;
-  border: 2pt solid var(--line-color);
-}
-#media audio,
-#media video {
-  display: block;
-  margin-top: 8px;
-  margin-bottom: 16px;
-  max-width: 100%;
+.callout {
+    background-color: hsl(36, 90%, 94%);
+    border: 1px dashed #e07b00;
+    padding: 10px 14px;
+    border-radius: 6px;
+    margin-bottom: 12px;
 }
 
+
+.media-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  gap: 14px;
+}
+
+.media-cell {
+  background-color: #fafafa;
+  border: 1px solid var(--line-color);
+  border-radius: 6px;
+  padding: 10px;
+  min-height: 80px;
+
+  & h4 {
+    color: var(--accent);
+    margin-bottom: 6px;
+    letter-spacing: 0.3px;
+  }
+  & img:hover {
+    opacity: 0.92;
+  }
+}
+
+.media-cell img,
+.media-cell video,
+.media-cell audio {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    min-width: 120px;
+    border-radius: 4px;
+}
+
+
 details {
-    border: 1px solid var(--line-color);
-    border-radius: 6px;
-    padding: 10px 14px;
+  border: 1px solid var(--line-color);
+  border-radius: 6px;
+  padding: 10px 14px;
 }
 details summary {
-  cursor: pointer;
-  font-weight: 600;
-  color: var(--blue);
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--blue);
 }
+
 
 fieldset {
   border: 1pt solid var(--line-color);
   border-radius: 8px;
-  padding: 16px 20px;
+  padding: 1rem 1.25rem;
 }
 legend {
     font-weight: 800;
     color: var(--accent);
     font-size: 1.1rem;
+    padding: 0 6px;
 }
 
 input[type="text"],
@@ -276,253 +268,81 @@ textarea {
   border: 1px solid #ccc;
   border-radius: 4px;
   font-family: inherit;
+  font-size: 14px;
 }
 textarea {
-    min-width: 200px;
-    height: 80px;
+  min-width: 200px;
+  height: 80px;
 }
 
-button[type="submit"] {
+button {
     background-color: var(--accent);
     color: white;
-    border: none;
-    padding: 8px 28px;
-    border-radius: 5px;
-    font-size: 1rem;
+    border: 2px solid transparent;
+    padding: 8px 18px;
+    border-radius: 4px;
+    font-size: 15px;
     cursor: pointer;
+    margin-top: 6px;
     font-family: inherit;
-}
-button[type="submit"]:hover {
-  background-color: var(--mixed);
 }
 
 label {
   font-weight: 600;
+  font-size: 0.95em;
 }
 
 input[type="radio"],
 input[type="checkbox"] {
-    margin-right: 4px;
-    margin-left: 2px;
+  margin-right: 4px;
+  margin-left: 2px;
 }
+
 
 hr {
   border: none;
   border-top: 1mm dashed var(--line-color);
   margin: 16px 0;
->>>>>>> 07afcd811f4fdf0bed6ecf003362003f15201283
 }
 
-
-/* main page wrapper */
-main {
-  margin: 24px auto;        /* auto centers it */
-  max-width: 900px;
-  min-width: 280px;
-  width: 92%;
-  padding-top: 6px;
-  padding-bottom: 40px;
-}
-
-.sec {
-  background-color: #ffffff;
-  border-style: solid;
-  border-color: var(--line);
-  border-width: 1px;
-  border-radius: 10px;
-  margin-bottom: 18px;
-  padding: 1.15rem 1.4rem;  /* shorthand */
-  scroll-margin-top: 70px;  /* so sticky nav doesnt cover it */
-}
-
-.sec h3 {
-  border-bottom: 2px solid var(--tomato);
-  padding-bottom: 6px;
-  margin-bottom: 10px;
-  color: var(--accent);
-}
-
-
-/* attendance - flex row of tags */
-.attend-row {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  justify-content: flex-start;
-  align-items: center;
-  margin-top: 4px;
-}
-
-.attend-row li {
-  background-color: var(--soft);
-  padding: 6px 12px;
-  border: 1px solid var(--line);
-  border-radius: 14px;
-  font-size: 0.95em;
-}
-
-/* attribute selector - show lead differently */
-.attend-row li[data-role="lead"] {
-  background-color: var(--accent);
-  color: white;
-  border-color: var(--mixed);
-  font-weight: 600;
-}
-
-
-/* agenda list */
-#agenda ol {
-  padding-left: 1.4rem;
-}
-#agenda li {
-  margin-bottom: 4px;
-}
-
-
-/* callout box in misc */
-.callout {
-    background-color: hsl(36, 90%, 94%);
-    border: 1px dashed #e07b00;
-    padding: 10px 14px;
-    border-radius: 6px;
-    margin-bottom: 12px;
-}
-
-
-/* media section - 3 col grid */
-.media-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: auto;
-  gap: 14px;
-}
-
-.media-cell {
-  background-color: #fafafa;
-  border: 1px solid var(--line);
-  border-radius: 6px;
-  padding: 10px;
-  min-height: 80px;
-}
-
-.media-cell h4 {
-  color: var(--accent);
-  margin-bottom: 6px;
-}
-
-.media-cell img,
-.media-cell video,
-.media-cell audio {
-  width: 100%;
-  height: auto;
-  max-width: 100%;
-  min-width: 120px;
-  border-radius: 4px;
-}
-
-
-/* form stuff */
-fieldset {
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  padding: 1rem 1.25rem;
-}
-
-legend {
-  font-weight: 600;
-  color: var(--accent);
-  padding: 0 6px;
-}
-
-input[type="text"],
-input[type="date"],
-textarea,
-select {
-  border-style: solid;
-  border-width: 1px;
-  border-color: var(--line);
-  border-radius: 4px;
-  padding: 6px 8px;
-  font-family: inherit;
-  font-size: 14px;
-  margin-top: 4px;
-  margin-bottom: 4px;
-}
-
-label {
-  font-size: 0.95em;
-}
-
-button {
-  background-color: var(--accent);
-  color: white;
-  border: 2px solid transparent;
-  padding: 8px 18px;
-  border-radius: 4px;
-  font-size: 15px;
-  cursor: pointer;
-  margin-top: 6px;
-}
-
-
-/* footer */
-footer {
-<<<<<<< HEAD
-  background-color: var(--cool);
-  color: #eaeaea;
-  text-align: center;
-  padding: 20px 12px;
-  margin-top: 1in;  /* absolute unit lol */
-  font-size: 0.85rem;
-}
-
-footer a { color: var(--cool2); }
-
-
-hr {
-  border: none;
-  border-top: 2mm solid var(--line);  /* mm cuz why not */
-  margin: 12px 0;
-}
-
-
-/* inline-ish tweaks */
 em {
-  display: inline;
-  color: var(--accent);
-  font-style: italic;
+    display: inline;
+    color: var(--accent);
+    font-style: italic;
 }
 
 .hidden { display: none; }
-
-
-/* header sizing (kinda unused but whatever) */
-header h1 {
-  width: 100%;
-  max-width: 720px;
-  min-width: 200px;
-  height: auto;
-}
 
 .small-note {
   color: #777;
 }
 
 
-/* ======= hover + active ======= */
+footer {
+    background-color: var(--blue);
+    color: #eaeaea;
+    text-align: center;
+    padding: 20px 12px;
+    margin-top: 1in;
+    font-size: 0.85rem;
+}
+footer a { color: var(--blue2); }
+
 
 a:hover {
   color: var(--mixed);
   text-decoration: none;
 }
-
 a:active {
   color: orange;
 }
 
 nav a:hover {
-  background-color: var(--accent);
+    background-color: var(--soft);
+    color: var(--main-red);
+}
+nav a:active {
+  background-color: tomato;
   color: white;
 }
 
@@ -534,8 +354,8 @@ button:active {
 }
 
 .media-cell:hover {
-  border-color: var(--accent);
-  background-color: #fff5f1;
+    border-color: var(--accent);
+    background-color: #fff5f1;
 }
 
 .attend-row li:hover {
@@ -543,173 +363,108 @@ button:active {
 }
 
 
-/* ======= combinators + extra selectors ======= */
-
-/* child combinator - only direct li kids of nav ul */
 nav > ul > li {
   padding: 2px 0;
 }
 
-/* adjacent sibling - p right after h3 */
 h3 + p {
-  margin-top: 2px;
-  color: #444;
+    margin-top: 2px;
+    color: #444;
 }
 
-/* general sibling - any ul after an h3 in same parent */
 h3 ~ ul {
   margin-top: 6px;
 }
 
-/* combining element + class */
 section.sec {
-  /* nothing fancy, just proving its here */
   overflow: hidden;
 }
 
-/* :has() - style any section that has a form inside it */
+span.leader {
+    font-weight: 600;
+    color: var(--blue);
+}
+
 .sec:has(form) {
   background-color: #fffdfa;
   border-left: 4px solid var(--accent);
 }
 
-/* nested css using & */
-.media-cell {
-  & h4 {
-    letter-spacing: 0.3px;
-  }
-  & img:hover {
-    opacity: 0.92;
-  }
-}
-
-
-/* ======= responsive ======= */
-
-/* phones */
-@media (max-width: 600px) {
-  h1 { font-size: 1.4rem; }
-
-  nav ul li {
-    display: inline-block;
-    margin-right: 2px;
-  }
-  nav a {
-    font-size: 12px;
-    padding: 4px 6px;
-  }
-
-  .media-grid {
-    grid-template-columns: 1fr;   /* stack on phone */
-  }
-
-  .attend-row {
-    gap: 6px;
-  }
-
-  main {
-    width: 96%;
-  }
-
-  .sec {
-    padding: 14px;
-  }
-}
-
-/* tablet */
-@media (min-width: 601px) and (max-width: 1024px) {
-  .media-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  main {
-    width: 94%;
-=======
-    background-color: var(--blue);
-    color: #eaeaea;
-    text-align: center;
-    padding: 18px 12px;
-    margin-top: 0;
-}
-footer a { color: var(--blue2); }
-
 section:has(details) {
-  background-color: var(--bg);
-}
-
-section.highlighted {
-  border-color: var(--accent);
-}
-
-section ~ section {
-    margin-top: 0px;
-}
-section + section {
-  border-top-width: 1pt;
+    background-color: var(--bg);
 }
 
 main > section {
   position: relative;
 }
 
-.sticky-note {
-    position: sticky;
-    top: 0;
-    background-color: var(--bg);
-    z-index: 10;
-    padding: 6px 0;
-}
-
-span.leader {
-  font-weight: 600;
-  color: var(--blue);
-}
-
 div.comments-wrap p ~ p {
   margin-top: 4px;
 }
 
+
 @media (max-width: 600px) {
+    h1 { font-size: 1.4rem; }
+
     header {
       padding: 1.2rem 1rem;
       text-align: center;
     }
-    header h1 { font-size: 1.4rem; }
 
-    main {
-        width: 95%;
-        padding-top: 12px;
-    }
-    section {
-      padding: 12px 10px;
-    }
     nav ul {
-      flex-direction: column;
-      gap: 6px;
-      align-items: stretch;
-      text-align: center;
-    }
-    #attendance ul {
         flex-direction: column;
         gap: 6px;
+        align-items: stretch;
+        text-align: center;
+    }
+    nav ul li {
+      display: inline-block;
+      margin-right: 2px;
+    }
+    nav a {
+      font-size: 12px;
+      padding: 4px 6px;
+    }
+
+    .media-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .attend-row {
+      gap: 6px;
+    }
+
+    main {
+        width: 96%;
+        padding-top: 12px;
+    }
+
+    .sec {
+      padding: 14px;
     }
 }
 
 @media (min-width: 601px) and (max-width: 1024px) {
+  .media-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
   main {
-    width: 92%;
+    width: 94%;
   }
   header {
     padding: 1.5rem 1.2rem;
   }
 }
 
-section {
-  & h3 {
-    text-decoration: none;
-    text-align: left;
-  }
-  & p {
-    line-height: 1.6;
->>>>>>> 07afcd811f4fdf0bed6ecf003362003f15201283
-  }
+@media (min-width: 1025px) {
+    main {
+      width: 92%;
+    }
+    .media-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .sec {
+      padding-left: 1.6rem;
+      padding-right: 1.6rem;
+    }
 }
