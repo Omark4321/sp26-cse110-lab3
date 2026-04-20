@@ -221,13 +221,19 @@ section h3, .sec h3 {
 }
 
 .media-cell img,
-.media-cell video,
-.media-cell audio {
+.media-cell video {
     width: 100%;
     height: auto;
     max-width: 100%;
     min-width: 120px;
     border-radius: 4px;
+}
+
+.media-cell audio {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  margin-top: 6px;
 }
 
 
