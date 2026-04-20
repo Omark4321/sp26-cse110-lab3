@@ -1,7 +1,7 @@
 # Standup Notes
 
 **Date / Time:** _e.g. Mon Apr 20, 2026 — 10:00 AM PT_
-**Meeting type:** _daily standup / sync / async catch-up — whatever it actually is_
+**Meeting type:** _daily standup / sync / async catch-up_
 **Where:** _Zoom link, Slack huddle, the couch by the window, etc._
 
 ## Who's here
