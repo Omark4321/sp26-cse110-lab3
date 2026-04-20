@@ -1,22 +1,17 @@
-/* pomodoro brainstorm meeting minutes */
-/* cse110 lab3 - omar */
-
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap');
 
-/* vars so i dont gotta retype these */
 :root {
-  --tomato: tomato;
-  --ink: #2b2b2b;
-  --page: #fdfaf4;
-  --line: #e3ddd1;
+  --main-red: tomato;
+  --bg: #fdfaf4;
+  --text: #2b2b2b;
+  --line-color: #e3ddd1;
   --accent: rgb(210, 80, 60);
-  --soft:   rgba(255, 99, 71, 0.18);
-  --cool:   hsl(205, 55%, 38%);
-  --cool2:  hsla(205, 45%, 55%, 0.9);
-  --p3red:  color(display-p3 0.88 0.35 0.28);
-  --mixed:  color-mix(in srgb, tomato 65%, black);
+  --soft: rgba(255, 99, 71, 0.18);
+  --blue: hsl(205, 55%, 38%);
+  --blue2: hsla(205, 45%, 55%, 0.9);
+  --p3red: color(display-p3 0.88 0.35 0.28);
+  --mixed: color-mix(in srgb, tomato 65%, black);
 }
-
 
 * {
   box-sizing: border-box;
@@ -24,15 +19,15 @@
   padding: 0;
 }
 
-/* base stuff */
 body {
     font-family: 'Nunito', Arial, sans-serif;
-    background-color: var(--page, #fff);   /* fallback if var dies */
-    color: var(--ink);
-    font-size: 16px;
+    background-color: var(--bg, #fff);
+    color: var(--text);
     line-height: 1.55;
+    font-size: 16px;
 }
 
+<<<<<<< HEAD
 h1, h2, h3, h4 {
   font-family: Nunito, Georgia, serif;
 }
@@ -109,6 +104,213 @@ nav a {
   padding: 6px 10px;
   font-size: 14px;
   border-radius: 4px;
+=======
+nav {
+  background-color: var(--mixed);
+  color: white;
+  padding: 8px 0px 8px 0px;
+}
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 18px;
+    list-style: none;
+}
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 4px 10px;
+    border-radius: 4px;
+}
+nav a:hover {
+  background-color: var(--soft);
+  color: var(--main-red);
+}
+nav a:active {
+    background-color: tomato;
+    color: white;
+}
+
+header {
+    background-color: var(--p3red);
+    background-color: var(--accent);
+    color: white;
+    text-align: left;
+    padding: 2rem 1.5rem 1.5rem 1.5rem;
+}
+header h1 {
+  font-size: 2rem;
+  color: white;
+}
+header h2 {
+    color: rgba(255,255,255,0.88);
+    font-weight: 400;
+    font-size: 1.25rem;
+}
+header h3 { color: hsla(0, 0%, 100%, 0.75); font-weight: 400; }
+header p { color: #f3f3f3; }
+
+h1, h2, h3, h4 {
+  font-family: Nunito, Georgia, serif;
+}
+h3 { font-size: 1.05rem; }
+
+a {
+  color: var(--main-red);
+  text-decoration: underline;
+}
+
+p {
+    margin-bottom: 10px;
+}
+
+main {
+  max-width: 900px;
+  min-width: 280px;
+  width: 90%;
+  margin: auto;
+  padding-top: 24px;
+  padding-bottom: 32px;
+  min-height: 80vh;
+}
+
+section {
+  margin-bottom: 28px;
+  padding: 18px 20px;
+  border-style: solid;
+  border-color: var(--line-color);
+  border-width: 1pt;
+  border-radius: 8px;
+  background-color: white;
+}
+section h3 {
+    margin-bottom: 12px;
+    color: var(--accent);
+    border-bottom: 2px solid var(--soft);
+    padding-bottom: 6px;
+}
+
+#attendance ul {
+  list-style: none;
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+#attendance ul li {
+    background-color: var(--soft);
+    padding: 6px 14px;
+    border-radius: 20px;
+    display: inline-block;
+    color: var(--text);
+    font-weight: 600;
+}
+
+.agenda-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 10px;
+}
+.agenda-grid li {
+  background-color: var(--soft);
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border-radius: 5px;
+  list-style-position: inside;
+  margin: 4px 2px 4px 0;
+}
+
+#media img {
+  width: 100%;
+  max-width: 480px;
+  height: auto;
+  border-radius: 6px;
+  margin-top: 8px;
+  margin-bottom: 12px;
+  border: 2pt solid var(--line-color);
+}
+#media audio,
+#media video {
+  display: block;
+  margin-top: 8px;
+  margin-bottom: 16px;
+  max-width: 100%;
+}
+
+details {
+    border: 1px solid var(--line-color);
+    border-radius: 6px;
+    padding: 10px 14px;
+}
+details summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--blue);
+}
+
+fieldset {
+  border: 1pt solid var(--line-color);
+  border-radius: 8px;
+  padding: 16px 20px;
+}
+legend {
+    font-weight: 800;
+    color: var(--accent);
+    font-size: 1.1rem;
+}
+
+input[type="text"],
+input[type="date"],
+select,
+textarea {
+  display: block;
+  width: 100%;
+  max-width: 350px;
+  padding: 6px 10px;
+  margin-top: 4px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: inherit;
+}
+textarea {
+    min-width: 200px;
+    height: 80px;
+}
+
+button[type="submit"] {
+    background-color: var(--accent);
+    color: white;
+    border: none;
+    padding: 8px 28px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-family: inherit;
+}
+button[type="submit"]:hover {
+  background-color: var(--mixed);
+}
+
+label {
+  font-weight: 600;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 4px;
+    margin-left: 2px;
+}
+
+hr {
+  border: none;
+  border-top: 1mm dashed var(--line-color);
+  margin: 16px 0;
+>>>>>>> 07afcd811f4fdf0bed6ecf003362003f15201283
 }
 
 
@@ -266,6 +468,7 @@ button {
 
 /* footer */
 footer {
+<<<<<<< HEAD
   background-color: var(--cool);
   color: #eaeaea;
   text-align: center;
@@ -420,5 +623,93 @@ section.sec {
   }
   main {
     width: 94%;
+=======
+    background-color: var(--blue);
+    color: #eaeaea;
+    text-align: center;
+    padding: 18px 12px;
+    margin-top: 0;
+}
+footer a { color: var(--blue2); }
+
+section:has(details) {
+  background-color: var(--bg);
+}
+
+section.highlighted {
+  border-color: var(--accent);
+}
+
+section ~ section {
+    margin-top: 0px;
+}
+section + section {
+  border-top-width: 1pt;
+}
+
+main > section {
+  position: relative;
+}
+
+.sticky-note {
+    position: sticky;
+    top: 0;
+    background-color: var(--bg);
+    z-index: 10;
+    padding: 6px 0;
+}
+
+span.leader {
+  font-weight: 600;
+  color: var(--blue);
+}
+
+div.comments-wrap p ~ p {
+  margin-top: 4px;
+}
+
+@media (max-width: 600px) {
+    header {
+      padding: 1.2rem 1rem;
+      text-align: center;
+    }
+    header h1 { font-size: 1.4rem; }
+
+    main {
+        width: 95%;
+        padding-top: 12px;
+    }
+    section {
+      padding: 12px 10px;
+    }
+    nav ul {
+      flex-direction: column;
+      gap: 6px;
+      align-items: stretch;
+      text-align: center;
+    }
+    #attendance ul {
+        flex-direction: column;
+        gap: 6px;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+  main {
+    width: 92%;
+  }
+  header {
+    padding: 1.5rem 1.2rem;
+  }
+}
+
+section {
+  & h3 {
+    text-decoration: none;
+    text-align: left;
+  }
+  & p {
+    line-height: 1.6;
+>>>>>>> 07afcd811f4fdf0bed6ecf003362003f15201283
   }
 }
